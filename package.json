@@ -4,7 +4,7 @@
   "description": "University's project",
   "main": "index.js",
   "scripts": {
-    "test": "run test"
+    "start": "node index.js"
   },
   "author": "Karen Pabon",
   "license": "ISC",
