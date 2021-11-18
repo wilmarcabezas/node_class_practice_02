@@ -1,7 +1,7 @@
 const express = require('express');
 const validatorHandler = require('../../middlewares/validator.handler');
 
-const workService = require('../../services/work/work.services');
+const routeService = require('../../services/route/route.services');
 
 const passport = require('passport');
 const bcrypt = require('bcrypt');
@@ -18,7 +18,7 @@ async (req, res, next) => {
     try
     {
         const body = req.body;
-        res.status(201).json(await workService.addWork(body));
+        res.status(201).json(await routeService.addWork(body));
     }
     catch(error)
     {
@@ -45,7 +45,7 @@ async (req, res, next) => {
     try
     {
         const body = req.query;
-        res.status(201).json(await workService.WorksByUser(body));
+        res.status(201).json(await routeService.WorksByUser(body));
     }
     catch(error)
     {

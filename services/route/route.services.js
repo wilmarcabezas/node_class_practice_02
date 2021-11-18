@@ -1,6 +1,7 @@
 const db = require('../../db/conect');
 const Model = require('../../model/route/route.model');
 
+
 const ModelCity =  require('../../model/city/city.model');
 const ModelUsers = require('../../model/user/user.model');
 const { populate } = require('../../model/user/user.model');
