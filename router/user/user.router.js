@@ -10,16 +10,12 @@ const bcrypt = require('bcrypt');
 
 const router = express.Router();
 
-/*
-
-passport.authenticate('jwt',{session: false}),
-checkRoles('admin'),
-*/ 
-
-
 router.post('/', checkApiKey,
 validatorHandler(createUserSchema, 'body'),
 async (req, res, next) => {
+    /* 	#swagger.tags = ['User']
+        #swagger.description = 'Endpoint to sign in a specific user...' */
+
     try
     {
         const body = req.body;
@@ -56,3 +52,9 @@ async (req, res, next) => {
 });
 
 module.exports=router;
+
+/*
+
+passport.authenticate('jwt',{session: false}),
+checkRoles('admin'),
+*/ 

@@ -34,8 +34,10 @@
   "paths": {
     "/user/": {
       "post": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to sign in a specific user...",
         "parameters": [],
         "responses": {
           "201": {
